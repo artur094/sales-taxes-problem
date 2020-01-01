@@ -4,10 +4,10 @@ from lib.taxescalculator import TaxesCalculator
 
 class Orders:
     def __init__(self):
-        self.orders = []
+        self.__orders = []
 
     def add(self, product, quantity, imported):
-        self.orders.append({
+        self.__orders.append({
             'product': product,
             'quantity': quantity,
             'imported': imported,
@@ -16,22 +16,25 @@ class Orders:
         })
     
     def clean(self):
-        self.orders = []
+        self.__orders = []
 
-    def taxes(self):
+    def getOrders(self):
+        return self.__orders
+
+    def getTaxes(self):
         taxes = 0
-        for order in self.orders:
+        for order in self.__orders:
             taxes += order.get('taxes', 0)
         return taxes
     
-    def price(self):
+    def getPrice(self):
         price = 0
-        for order in self.orders:
+        for order in self.__orders:
             price += order.get('price', 0)
         return price
 
     def printProducts(self):
-        for order in self.orders:
+        for order in self.__orders:
             imported = ""
             if order['imported']:
                 imported = " imported"

@@ -74,8 +74,8 @@ def test_orders_price():
     assert orders.getPrice() == 98.28
 
 def test_taxes_calculator_round():
-    assert TaxesCalculator.round(0.01) == 0
-    assert TaxesCalculator.round(0.024) == 0
+    assert TaxesCalculator.round(0.001) == 0.0
+    assert TaxesCalculator.round(0.024) == 0.0
     assert TaxesCalculator.round(0.025) == 0.05
     assert TaxesCalculator.round(0.026) == 0.05
     assert TaxesCalculator.round(0.03) == 0.05

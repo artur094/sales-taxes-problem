@@ -39,5 +39,5 @@ class TaxesCalculator:
 
     @staticmethod
     def round(taxes):
-        taxes += 0.01
+        taxes += 0.001
         return round(round(taxes*20) / 20, 2)
