@@ -40,8 +40,8 @@ class Orders:
                 imported = " imported"
 
             print(f"{order['quantity']}{imported} {order['product'].getName()}: {order['price']}")
-        print(f'Sales Taxes: {self.taxes()}')
-        print(f'Total: {self.price()}')
+        print(f'Sales Taxes: {self.getTaxes()}')
+        print(f'Total: {self.getPrice()}')
         print("\n")
 
     def __repr__(self):
