@@ -70,17 +70,14 @@ def test_orders_price():
     orders.add(Product('packet of headache pills', ProductType.Medicals, 9.75), 1, False)
     orders.add(Product('box of chocolates', ProductType.Food, 11.25), 3, True)
     
-    assert orders.getTaxes() == 7.80
-    assert orders.getPrice() == 98.28
+    assert orders.getTaxes() == 7.90
+    assert orders.getPrice() == 98.38
 
 def test_taxes_calculator_round():
-    assert TaxesCalculator.round(0.001) == 0.0
-    assert TaxesCalculator.round(0.024) == 0.0
-    assert TaxesCalculator.round(0.025) == 0.05
-    assert TaxesCalculator.round(0.026) == 0.05
-    assert TaxesCalculator.round(0.03) == 0.05
+    assert TaxesCalculator.round(0.0) == 0.0
+    assert TaxesCalculator.round(0.001) == 0.05
     assert TaxesCalculator.round(0.04) == 0.05
-    assert TaxesCalculator.round(0.055) == 0.05
+    assert TaxesCalculator.round(0.055) == 0.1
     assert TaxesCalculator.round(0.075) == 0.1
     assert TaxesCalculator.round(0.085) == 0.1
 

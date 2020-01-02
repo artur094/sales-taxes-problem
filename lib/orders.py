@@ -25,13 +25,13 @@ class Orders:
         taxes = 0
         for order in self.__orders:
             taxes += order.get('taxes', 0)
-        return taxes
+        return round(taxes, 2)
     
     def getPrice(self):
         price = 0
         for order in self.__orders:
             price += order.get('price', 0)
-        return price
+        return round(price, 2)
 
     def printProducts(self):
         for order in self.__orders:

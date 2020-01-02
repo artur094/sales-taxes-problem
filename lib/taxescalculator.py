@@ -1,5 +1,6 @@
 from lib.producttype import ProductType
 from lib.product import Product
+import math
 
 class TaxesCalculator:
     @staticmethod
@@ -13,15 +14,15 @@ class TaxesCalculator:
         if not imported:
             return 0.0
 
-        price = product.getPrice() * quantity
+        price = product.getPrice()
         taxes = price * 0.05
-        return TaxesCalculator.round(taxes)
+        return round(TaxesCalculator.round(taxes) * quantity, 2)
 
     @staticmethod
     def getProductTaxes(product, quantity):
-        price = product.getPrice() * quantity
+        price = product.getPrice()
         taxes = price * TaxesCalculator.getTaxesFromProductType(product)
-        return TaxesCalculator.round(taxes)
+        return round(TaxesCalculator.round(taxes) * quantity, 2)
 
     @staticmethod
     def getTaxes(product, quantity, imported):
@@ -39,5 +40,4 @@ class TaxesCalculator:
 
     @staticmethod
     def round(taxes):
-        taxes += 0.001
-        return round(round(taxes*20) / 20, 2)
+        return round(math.ceil((taxes*100.0)/5.0) * (5.0/100.0), 2)
