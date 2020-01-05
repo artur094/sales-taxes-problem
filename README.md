@@ -88,28 +88,28 @@ in this README.md.
 
 #### Lib Structure
 The library contains different files, one for each class generated to solve the problem.
-- **orders.py**: Handle the selected products in the basket of a customer. 
+- **orders.py**: Handles the selected products in the basket of a customer. 
 It is possible to add *products* for each order and retrieve the total price and taxes that the customer has to pay 
 in order to buy these products.
-- **parser.py**: Parse the input file and generated a order with all products in the file.
+- **parser.py**: Parses the input file and generates an order with all products in the file.
 
-- **product.py**: Handle one single type of product. 
+- **product.py**: Handles one single type of product. 
 
-- **categories.py**: Define the categories of products. Taxes are computed based on the product category.
+- **categories.py**: Defines the categories of products. Taxes are computed based on the product category.
 
 - **taxescalculator.py**: Based on the input, it returns the taxes rounded to 2 decimals. 
 It is possible to compute the importation taxes, category taxes or the sum of both taxes.
 
 ## How to Run
 There are 2 ways to run the code:
-- *Hardcoded cases*: The main script runs these cases if both the input file and the categories file are not specified. 
+- *Hardcoded cases*: The main script runs these cases if both the input filename and the categories filename are not specified. 
 It just run the test cases defined before.
 ```
 python3 app.py
 ```
 - *Input cases*: It is required to specify the input filename and the categories filename.
 ```
-python3 app.py --input <*input filename*> --categories <*categories filename*>
+python3 app.py --input <input filename> --categories <categories filename>
 ```
 
 ## Tests
