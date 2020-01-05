@@ -93,11 +93,8 @@ The library contains different files, one for each class generated to solve the 
 It is possible to add *products* for each order and retrieve the total price and taxes that the customer has to pay 
 in order to buy these products.
 - **parser.py**: Parses the input file and generates an order with all products in the file.
-
 - **product.py**: Handles one single type of product. 
-
 - **categories.py**: Defines the categories of products. Taxes are computed based on the product category.
-
 - **taxescalculator.py**: Based on the input, it returns the taxes rounded to 2 decimals. 
 It is possible to compute the importation taxes, category taxes or the sum of both taxes.
 
