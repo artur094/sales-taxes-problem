@@ -71,19 +71,20 @@ If you prefer, you can use **venv** to keep the *pytest* library bounded to the 
 The code is structured in the following way:
 - **lib**: Contains all classes used by *app.py*.
 - **app.py**: The main file to run this solution.
-- **categories.csv**: It maps the products with their categories (goods / food / books / medical products / ...). 
+- **text_taxes_sales_problem.py**: The tests that can be executed through *pytest*.
+- **files**: Contains examples of input and categories files.
+- **files/categories.csv**: It maps the products with their categories (goods / food / books / medical products / ...). 
 If the category contains *book*, *medical* or *food*, then the script will consider the product free of taxes. 
 In the other cases, a tax of 10% will be added to the final price.
-- **input.txt**: The input file which corresponds to the basket with all products to buy. 
+- **file/input_X.txt**: The input file which corresponds to the basket with all products to buy. 
 The lines must be formatted in the following way: 
 <*numerical quantity*> <*imported/empty*> <*name of the product*> at <*price*>. 
 If the file is formatted in this way, the solution is able to parse it and return the price and taxes. 
 The name of the product must be present in the CSV file, 
 otherwise it will be considered as general goods with 10% of taxes. 
 The *imported* must be present only if the product is imported, otherwise it can be omitted.
-- **text_taxes_sales_problem.py**: The tests that can be executed through *pytest*.
 
-All *input_X.txt* files are examples of possible input files which are the same as the test cases shown 
+All *files/input_X.txt* files are examples of possible input files which are the same as the test cases shown 
 in this README.md.
 
 #### Lib Structure
