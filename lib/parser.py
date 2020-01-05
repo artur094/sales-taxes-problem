@@ -16,7 +16,13 @@ class Parser:
     '''
 
     def __init__(self, categories_file):
-        self.__loadCategories(categories_file)
+        self.categories = {}
+        try:
+            self.__loadCategories(categories_file)
+        except:
+            print("\n!!! ERROR !!!")
+            print(f"Error on loading categories file {categories_file}")
+            print("Setting all categories to Goods! (10% of tax percentage)\n")
 
     def __loadCategories(self, categories_file):
         '''
