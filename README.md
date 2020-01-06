@@ -1,4 +1,4 @@
-# Sales taxes problem
+# Sales Taxes Problem
 This solution solves the **Sales Taxes Problem** using *Python 3*. 
 The problem requires to compute the taxes on the products in a basket and return their final 
 price together with the total taxes that the client must pay.
@@ -54,14 +54,14 @@ Sales Taxes: 7.90
 Total: 98.38
 ```
 
-## Pre Requisites
+## Requirements
 The solution is written in *Python 3.7*, 
 hence you need *Python 3* installed on your OS. 
 To install *Python 3* on your OS, check this website:
 https://www.python.org/downloads/
 
 In order to run the tests, you need to install the *Python3* library: **pytest**.
-To install *pytest*, check this website:
+To install this library, check this website:
 https://docs.pytest.org/en/latest/getting-started.html
 
 If you prefer, you can use **venv** to keep the *pytest* library bounded to the project directory,
@@ -89,28 +89,31 @@ in this README.md.
 
 #### Lib Structure
 The library contains different files, one for each class generated to solve the problem.
-- **orders.py**: Handles the selected products in the basket of a customer. 
+- **orders.py**: Manages the selected products in the basket of a customer. 
 It is possible to add *products* for each order and retrieve the total price and taxes that the customer has to pay 
 in order to buy these products.
 - **parser.py**: Parses the input file and generates an order with all products in the file.
-- **product.py**: Handles one single type of product. 
-- **categories.py**: Defines the categories of products. Taxes are computed based on the product category.
+- **product.py**: Manage one single type of product. 
+- **categories.py**: Defines the categories of products. Taxes are computed based on the category.
 - **taxescalculator.py**: Based on the input, it returns the taxes rounded to 2 decimals. 
-It is possible to compute the importation taxes, category taxes or the sum of both taxes.
+It is possible to compute the import taxes, category taxes or the sum of both taxes.
 
 ## How to Run
 There are 2 ways to run the code:
-- *Hardcoded cases*: The main script runs these cases if both the input filename and the categories filename are not specified. 
-It just run the test cases defined before.
+- *Hardcoded cases*: The main script runs these cases if the input filename is not specified. 
+It just run the test cases defined before. 
+The products considered are those in the **Test Cases** section.
 ```
 python3 app.py
 ```
-- *Input cases*: It is required to specify the input filename and the categories filename.
+- *Input cases*: It is required to specify the input filename. The categories argument is
+optional, but without it all the products are considered as generic goods, with a 10% of tax
+to add to the final price.
 ```
-python3 app.py --input <input filename> --categories <categories filename>
+python3 app.py --input <input filename> --categories <categories CSV filename>
 ```
 
-## Tests
+## How to Test
 If you want to test the code, just run:
 ```
 pytest
