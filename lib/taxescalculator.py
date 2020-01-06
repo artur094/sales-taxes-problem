@@ -61,4 +61,8 @@ class TaxesCalculator:
         '''
             Round up to the nearest 0.05
         '''
+        # ceil -> round up to the highest integer ( math.ceil(0.1) = 1)
+        # To round up to the second decimal, multiply by 100 before rounding up, then divide by 100 after the rounding to bring back the decimal part.
+        # To round up to a multiple of 5, divide before rounding and after that, multiply the result by 5
+
         return round(math.ceil((taxes*100.0)/5.0) * (5.0/100.0), 2)
