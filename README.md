@@ -7,6 +7,8 @@ It is not required to compile anything, just have *Python3* installed
 (more details in **Requirements** section).
 For more information on how to run the code, check the **How to Run** section.
 
+This solution is released with the MIT license.
+
 ## Problem
 
 **Basic sales tax** is applicable at a rate of **10%** on all goods, 
