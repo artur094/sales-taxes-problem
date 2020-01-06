@@ -20,9 +20,9 @@ categories_file = args.categories
 input_file = args.input
 
 
-# If both input file and category file are defined, then use them as input
+# If input file is defined, then parse it to retrieve all the products in the basket
 # Otherwise, use hard coded test cases.
-if input_file != '' and categories_file != '':
+if input_file != '':
     parser = Parser(categories_file)
     orders = parser.parse(input_file)
     orders.printProducts()
