@@ -1,7 +1,11 @@
 # Sales Taxes Problem
-This solution solves the **Sales Taxes Problem** using *Python 3*. 
 The problem requires to compute the taxes on the products in a basket and return their final 
 price together with the total taxes that the client must pay.
+
+This solution solves the **Sales Taxes Problem** using *Python 3*.
+It is not required to compile anything, just have *Python3* installed 
+(more details in **Requirements** section).
+For more information on how to run the code, check the **How to Run** section.
 
 ## Problem
 
